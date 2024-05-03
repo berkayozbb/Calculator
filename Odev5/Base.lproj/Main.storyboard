@@ -39,21 +39,27 @@
                                                     <action selector="ACButtonClicked:" destination="BYZ-38-t0r" eventType="touchUpInside" id="50r-iq-XAE"/>
                                                 </connections>
                                             </button>
-                                            <button opaque="NO" contentMode="scaleAspectFit" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6rA-9d-DDh">
+                                            <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6rA-9d-DDh">
                                                 <rect key="frame" x="100.5" y="0.0" width="80.5" height="80"/>
                                                 <color key="tintColor" systemColor="underPageBackgroundColor"/>
                                                 <state key="normal" title="Button"/>
-                                                <buttonConfiguration key="configuration" style="filled" title=" " cornerStyle="small">
+                                                <buttonConfiguration key="configuration" style="filled" title="+/-" cornerStyle="small">
                                                     <fontDescription key="titleFontDescription" type="system" pointSize="20"/>
                                                 </buttonConfiguration>
+                                                <connections>
+                                                    <action selector="changePlusMinusButtonClicked:" destination="BYZ-38-t0r" eventType="touchUpInside" id="ydf-eK-Iep"/>
+                                                </connections>
                                             </button>
-                                            <button opaque="NO" contentMode="scaleAspectFit" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Saw-Qk-yVi">
+                                            <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Saw-Qk-yVi">
                                                 <rect key="frame" x="201" y="0.0" width="80.5" height="80"/>
                                                 <color key="tintColor" systemColor="underPageBackgroundColor"/>
                                                 <state key="normal" title="Button"/>
-                                                <buttonConfiguration key="configuration" style="filled" title=" " cornerStyle="small">
+                                                <buttonConfiguration key="configuration" style="filled" title="%" cornerStyle="small">
                                                     <fontDescription key="titleFontDescription" type="system" pointSize="20"/>
                                                 </buttonConfiguration>
+                                                <connections>
+                                                    <action selector="percentButtonClicked:" destination="BYZ-38-t0r" eventType="touchUpInside" id="tZP-Kv-bjR"/>
+                                                </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Pio-JW-BYn">
                                                 <rect key="frame" x="301.5" y="0.0" width="80.5" height="80"/>
@@ -227,11 +233,11 @@
                                             <constraint firstAttribute="height" constant="80" id="Lia-Fe-Kry"/>
                                         </constraints>
                                     </stackView>
-                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="y1H-Cq-C0i">
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="y1H-Cq-C0i">
                                         <rect key="frame" x="0.0" y="456.5" width="382" height="80"/>
                                         <subviews>
                                             <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pnX-be-ocI">
-                                                <rect key="frame" x="0.0" y="0.0" width="181" height="80"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="98" height="80"/>
                                                 <color key="tintColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <state key="normal" title="Button"/>
                                                 <buttonConfiguration key="configuration" style="filled" title="0" cornerStyle="small">
@@ -241,8 +247,19 @@
                                                     <action selector="zeroButtonClicked:" destination="BYZ-38-t0r" eventType="touchUpInside" id="doi-fb-mY8"/>
                                                 </connections>
                                             </button>
+                                            <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hcl-pt-eAt">
+                                                <rect key="frame" x="118" y="0.0" width="79" height="80"/>
+                                                <color key="tintColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <state key="normal" title="Button"/>
+                                                <buttonConfiguration key="configuration" style="filled" title="," cornerStyle="small">
+                                                    <fontDescription key="titleFontDescription" type="system" pointSize="20"/>
+                                                </buttonConfiguration>
+                                                <connections>
+                                                    <action selector="dotButtonClicked:" destination="BYZ-38-t0r" eventType="touchUpInside" id="FXQ-Cf-EJG"/>
+                                                </connections>
+                                            </button>
                                             <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5gs-a2-XRP">
-                                                <rect key="frame" x="201" y="0.0" width="181" height="80"/>
+                                                <rect key="frame" x="217" y="0.0" width="165" height="80"/>
                                                 <color key="tintColor" systemColor="systemOrangeColor"/>
                                                 <state key="normal" title="Button"/>
                                                 <buttonConfiguration key="configuration" style="filled" title="=" cornerStyle="small">

@@ -105,6 +105,41 @@ class ViewController: UIViewController {
         }
     }
     
+    @IBAction func dotButtonClicked(_ sender: Any) {
+        if let oldResult = resultLabel.text {
+               if !oldResult.contains(".") {
+                   let newResult = "\(oldResult)."
+                   resultLabel.text = newResult
+                   equalClicked = false
+               }
+           }
+    }
+    
+    @IBAction func changePlusMinusButtonClicked(_ sender: Any) {
+        if let oldResult = Double(resultLabel.text!){
+            let newResult = oldResult * -1
+            if newResult == Double(Int(newResult)){
+                resultLabel.text = String(Int(newResult))
+            }else{
+                let formattedResult = String(format: "%.6f", newResult)
+                resultLabel.text = String(formattedResult)
+            }
+        }
+    }
+    
+    @IBAction func percentButtonClicked(_ sender: Any) {
+        if let oldResult = Double(resultLabel.text!){
+            let newResult = oldResult / 100
+            if newResult == Double(Int(newResult)){
+                resultLabel.text = String(Int(newResult))
+            }else{
+                let formattedResult = String(format: "%.5f", newResult)
+                resultLabel.text = String(formattedResult)
+            }
+        }
+    }
+    
+    
     @IBAction func equalButtonClicked(_ sender: Any) {
         if isPlusActive == true{
             number2 = Double(resultLabel.text!)!
